@@ -1,0 +1,25 @@
+* {
+  all: none;
+  margin: 0;
+}
+
+body {
+  width: 99vw;
+  min-height: 99vh;
+}
+
+graph-wrapper.edit circle, graph-wrapper.edit path {
+  transition: none;
+}
+graph-wrapper circle {
+  stroke: transparent;
+  stroke-width: 10;
+  r: 0.4;
+  transition-property: cx, cy;
+  fill: rgba(72, 0, 255, 0.605);
+}
+graph-wrapper path {
+  stroke: rgba(165, 165, 222, 0.523);
+  stroke-width: 0.2;
+  transition-property: d;
+}
