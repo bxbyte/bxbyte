@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ES2022",
+        "preserveConstEnums": false,
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+    },
+  "include": [
+    "src/scripts/**/*",
+    "src/scripts/*"
+  ]
+}

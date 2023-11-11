@@ -1,11 +1,55 @@
-* {
-  all: none;
-  margin: 0;
+*:not(script, title, path, circle) {
+  all: unset;
 }
 
 body {
   width: 99vw;
   min-height: 99vh;
+  margin: 0;
+}
+
+nav {
+  position: relative;
+  width: calc(100% - 3em);
+  padding: 1em 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: auto;
+}
+nav .bar {
+  position: absolute;
+  width: 5ch;
+  height: 2px;
+  bottom: 1em;
+  background: red;
+}
+nav a.active {
+  color: red;
+}
+nav svg {
+  width: 1em;
+  height: 1em;
+}
+nav svg path {
+  stroke: black;
+  fill: none;
+  transition: all 0.2s ease-in-out;
+}
+nav.open {
+  justify-content: right;
+}
+nav.open a {
+  transform: translateY(-2em);
+}
+nav.open path:nth-child(1) {
+  d: path("M1,1 L3,3 L5,1");
+}
+nav.open path:nth-child(2) {
+  d: path("M3,3 L3,3");
+}
+nav.open path:nth-child(3) {
+  d: path("M1,5 L3,3 L5,5");
 }
 
 graph-wrapper.edit circle, graph-wrapper.edit path {
@@ -13,13 +57,13 @@ graph-wrapper.edit circle, graph-wrapper.edit path {
 }
 graph-wrapper circle {
   stroke: transparent;
-  stroke-width: 10;
-  r: 0.4;
+  stroke-width: 4;
+  r: 0.5;
   transition-property: cx, cy;
   fill: rgba(72, 0, 255, 0.605);
 }
 graph-wrapper path {
-  stroke: rgba(165, 165, 222, 0.523);
-  stroke-width: 0.2;
+  stroke: rgba(165, 165, 222, 0.2);
+  stroke-width: 0.25;
   transition-property: d;
 }
